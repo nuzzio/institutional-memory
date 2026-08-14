@@ -93,11 +93,13 @@ The prompt in that script deliberately says nothing about updating or trusting
 newer information. `run_session_2.py` does say that, correctly, for a real policy
 update — reuse its wording here and you have decided the outcome before the run.
 
-**`stretch_memory_curator.py`** needed three fixes to work at all (missing
-`environment_id`, memory store never attached, message sent before the stream
-opened). They are in this branch and upstream as
-[PR #13](https://github.com/rosscrooke/institutional-memory/pull/13). If you are
-on upstream `main`, it will crash.
+**`stretch_memory_curator.py`** needed three fixes to work at all — missing
+`environment_id`, memory store never attached as a resource, and the message sent
+before the stream was opened. All three are on this branch; on upstream `main` it
+crashes.
+
+This branch is self-contained. Nothing here waits on an upstream merge — clone it
+and everything works.
 
 ## 6. If you change the system prompt
 
