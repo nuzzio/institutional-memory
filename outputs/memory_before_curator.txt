@@ -1,0 +1,33 @@
+Memory store: <memstore_id redacted>
+============================================================
+
+--- /access-policy.md  (2762 chars) ---
+# Production Access Policy (keywords: prod access, access request, SRE, IAM, read-only, read-write, privileged, certification)
+
+*Source: policy-update-2026-05-15.md. Effective 2026-05-15. Supersedes January 2026 version.*
+*Policy owned by Maya Singh (Head of Security) and Carlos Mendes (Head of SRE).*
+*Changed after April 2026 incident review (PROD-INC-04-2026). Company grew from 40 → 280 engineer...
+
+--- /onboarding.md  (1089 chars) ---
+# Onboarding Overview (keywords: onboarding, new hire, first day, handbook, buddy, git workflow, post-mortem)
+
+*Source: onboarding-handbook.md. Version 4.2, effective January 2026.*
+*Prod access timeline updated per policy-update-2026-05-15.md.*
+
+## Day 1
+
+- Receive: laptop, YubiKey, credentials for email/Slack/GitHub/staging (read-only)
+- Email format: firstname.lastname@bts-synthetic.example
+- G...
+
+--- /people-and-teams.md  (2185 chars) ---
+# People & Team Directory (keywords: key people, team, SRE, leadership, contacts, Slack handles)
+
+*Source: team-directory.md + onboarding-handbook.md (January 2026) + team-directory-update.md (May 2026 re-org).*
+*Last updated: May 2026 re-org (effective 2026-04-01 / 2026-04-15).*
+
+## Engineering Leadership (updated May 2026)
+
+| Name | Role | Slack | Location | Notes |
+|---|---|---|---|---|
+| Anika...

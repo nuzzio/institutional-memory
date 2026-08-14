@@ -1,0 +1,46 @@
+=== SESSION 1 ===
+Question: I just joined the company and I need read-only prod access to debug an issue tomorrow. What do I do? Be specific about the steps and the people I need to talk to.
+
+--- ANSWER ---
+The memory store is empty — this is a fresh start. Let me answer from the documents provided, then save what I've learned.
+
+---
+
+## Getting Read-Only Prod Access (Fast Version)
+
+You have two paths depending on your situation:
+
+### ⚠️ Path A: You need access *tomorrow* (Urgent / P1 Debug)
+
+Since you need access urgently to debug an issue, you can invoke the **urgent access exception**:
+
+1. **Contact the on-call SRE directly** — Check PagerDuty for who is on call this week. Based on the team directory, the active SREs are **Liu Wei**, **Sarah Hofmann**, and **Rachel Wong** (Diego Sanchez is on parental leave through July 2026).
+2. **Ask the on-call SRE to grant temporary 24-hour read-only access** — They can do this without a pairing session for urgent/P1 situations.
+3. **Book the pairing session within 5 working days** — If you don't complete the pairing session within that window, your access is automatically revoked.
+
+### Path B: Standard Process (if tomorrow isn't truly urgent)
+
+You must first hit the **2-week tenure** threshold plus complete a pairing session. If you've been here less than 2 weeks, you are not yet eligible for standard read-only access — the urgent exception above is your only option.
+
+If you are past 2 weeks:
+
+1. **Open a ticket in `#sre-access-requests`** on Slack.
+2. **Tag two people in the ticket:**
+   - Your direct manager
+   - The SRE on rota for this week (check PagerDuty; one of Liu Wei @?, Sarah Hofmann @?, or Rachel Wong @? — Slack handles aren't listed for SREs, so ask in the channel or ask **Carlos Mendes @carlosm**, Head of SRE, who owns the rotation)
+3. **The on-rota SRE will schedule a 30-minute pairing session** within 2 working days to walk you through the access tooling.
+4. **After the pairing session**, the SRE files your access in Okta. Access is provisioned within **4 hours**.
+
+---
+
+## Key contacts summary
+
+| Who | Why | Slack |
+|---|---|---|
+| Your direct manager | Must be tagged on the access ticket | — |
+| On-call SRE this week | Handles the request and pairing session | Check PagerDuty |
+| Carlos Mendes | Head of SRE — escalate if on-call SRE is unreachable | @carlosm |
+
+**Bottom line for tomorrow:** Go straight to the on-call SRE in PagerDuty, explain it's urgent, and ask for the 24-hour emergency grant. Then book your pairing session within the week.
+
+---I've saved everything to memory for future sessions. You're all set — the urgent path via the on-call SRE in PagerDuty is your fastest route to access by tomorrow.

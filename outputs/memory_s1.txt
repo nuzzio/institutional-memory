@@ -1,0 +1,27 @@
+Memory store: <memstore_id redacted>
+============================================================
+
+--- /access-policy.md  (2658 chars) ---
+# Production Access Policy
+*Source: policy-update-2026-05-15.md — effective 2026-05-15*
+*Supersedes: January 2026 version (SRE pairing model)*
+*Policy owners: Maya Singh (Head of Security) + Carlos Mendes (Head of SRE)*
+*Triggered by: April 2026 incident review PROD-INC-04-2026*
+
+## Three levels of prod access
+
+| Level | Eligibility | Use |
+|---|---|---|
+| Read-only | 3 working days tenure + Prod ...
+
+--- /people-and-teams.md  (2543 chars) ---
+# Key People & Roles
+*Source: team-directory.md + onboarding-handbook.md — January 2026 baseline*
+*Updated with: team-directory-update.md — May 2026 re-org*
+
+## Engineering Leadership (as of May 2026 re-org)
+
+| Name | Role | Effective | Notes |
+|---|---|---|---|
+| Anika Reddy | **Chief AI Officer** | 2026-04-01 | Was Head of Engineering — no longer manages Engineering day-to-day |
+| **Yuki Tanaka*...

@@ -1,0 +1,100 @@
+=== Session 4 — what have you learned? ===
+
+--- MEMORY OPERATIONS ---
+bash ls /mnt/memory/institutional-memory/ 2>&1
+read /mnt/memory/institutional-memory/access-policy.md
+read /mnt/memory/institutional-memory/onboarding.md
+read /mnt/memory/institutional-memory/people-and-teams.md
+
+--- ANSWER ---
+Here is a full synthesis of everything recorded across previous sessions. I've flagged uncertainties and contradictions explicitly.
+
+---
+
+## Company Overview
+
+The company appears to be **BTS Synthetic** (GitHub org: `bts-synthetic`, email domain: `@bts-synthetic.example`). It has grown significantly — from roughly **40 to 280 engineers** — which drove a major policy overhaul in May 2026.
+
+---
+
+## 1. People & Leadership
+
+### Engineering Leadership
+| Name | Role | Notes |
+|---|---|---|
+| **Anika Reddy** | Chief AI Officer | Was Head of Engineering until 2026-04-01; no longer manages day-to-day eng |
+| **Yuki Tanaka** | Head of Engineering | Effective 2026-04-15; was Head of Platform; based in Tokyo |
+| **Tom Bryce** | Head of Platform | Was Engineering Ops Lead; promoted May 2026; based in London |
+| **Priya Shah** | Engineering Ops Lead | Moved from Web Team Lead; previously owned frontend |
+| **Carlos Mendes** | Head of SRE | Based in Lisbon; co-owns access policy |
+| **Maya Singh** | Head of Security | Based in Bangalore; co-owns access policy |
+
+### SRE Team (managed by Carlos Mendes, on-call via PagerDuty)
+- Liu Wei (joined 2023), Sarah Hofmann (joined 2024), Diego Sanchez (joined 2025), Rachel Wong (joined 2025), Anil Krishnan (joined April 2026)
+- ⚠️ **Note on Diego Sanchez:** An older record said he was on parental leave through July 2026; the updated record says he returned in May 2026. The newer entry supersedes — but if this comes up, worth verifying in PagerDuty.
+
+### Service Ownership (as of May 2026)
+| Service | Owner |
+|---|---|
+| payment-service | Maya Patel (new hire, joined March 2026; was Tom Bryce) |
+| auth-service | Yuki Tanaka / Idris Patel |
+| signing-service | Yuki Tanaka |
+| tenant-config-service | Yuki Tanaka |
+| frontend | Daniel Okonkwo (was Priya Shah) |
+
+For unlisted services: `gh repo view --json owners <service>`
+
+---
+
+## 2. Production Access Policy
+
+**Current policy effective: 2026-05-15** (supersedes January 2026 version). Owned by Maya Singh and Carlos Mendes. Triggered by April 2026 incident review (PROD-INC-04-2026) — the old pairing model didn't scale at 280 engineers.
+
+### Three tiers:
+
+| Level | Eligibility | What changed? |
+|---|---|---|
+| **Read-only** | 3 working days tenure + Prod Access Foundations cert | **Significantly changed** |
+| **Read-write** | 6 weeks + read-only + tech lead sign-off + SRE sign-off | Unchanged |
+| **Privileged** | ~12 weeks + on-call certification | Unchanged |
+
+### New read-only process (post May 2026):
+1. Complete **Prod Access Foundations** course in **BTS Learning portal** (~90 min, self-paced)
+2. Pass the end-of-course assessment
+3. Get **manager sign-off once** (for the initial certification only)
+4. Request access via **IAM platform** (link in completion email)
+5. Access is **just-in-time, 4-hour windows** — re-request as needed
+6. Manager is auto-notified of each request (no further approval action needed)
+
+**No SRE pairing session. No Slack ticket.** (Both were requirements under the old process.)
+
+### Migration cutoff:
+Engineers with read-only access under the old policy must complete the new certification by **2026-06-30** or lose access.
+
+---
+
+## 3. Onboarding
+
+*Handbook v4.2, effective January 2026; prod access section updated per May 2026 policy.*
+
+- **Day 1:** Laptop, YubiKey, email/Slack/GitHub/staging credentials (read-only). No prod access.
+- **Days 2–5:** Buddy assigned for first two weeks (codebase tour, git workflow, on-call rotation, post-mortem culture).
+- **Git workflow:** Trunk-based development; all changes via PR; **two approvals required** to merge.
+- **Post-mortems:** Blameless; written within **48 hours** of any P0 or P1 incident.
+
+---
+
+## 4. Uncertainties & Contradictions
+
+| Issue | Detail |
+|---|---|
+| **Diego Sanchez's leave status** | Old note: on parental leave through July 2026. Updated note: returned May 2026. I've trusted the newer entry, but haven't seen a primary source confirming this. |
+| **Migration deadline passed?** | The 2026-06-30 cutoff for old-policy read-only holders has now passed (today is August 2026). It's likely many engineers have been through this, but we have no record of what actually happened post-cutoff. |
+| **No customer data on file** | Nothing has been recorded about specific customers, contracts, or SLAs. |
+| **No product/service architecture overview** | We have service ownership but no high-level architectural or dependency map. |
+| **Priya Shah's Slack handle** | Not recorded (listed as "—" in the directory). All other leadership have handles. |
+| **Maya Patel vs. Maya Singh** | Two "Mayas" in the org — Maya **Singh** (Head of Security) and Maya **Patel** (payment-service tech lead, new hire). Worth being careful not to confuse them. |
+
+---
+
+That's the complete picture from memory. Let me know if you want to drill into any area, or if you have new documents to update the record.

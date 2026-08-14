@@ -1,0 +1,23 @@
+Here's what I have on both topics, sourced from the onboarding handbook (v4.2, effective January 2026):
+
+---
+
+## Git Workflow
+
+- **Trunk-based development** — everyone works off main/trunk.
+- All changes go through a **Pull Request**.
+- **Two approvals** are required before merging.
+
+Your buddy (assigned in your first week) will walk you through this in more detail during Days 2–5.
+
+---
+
+## What You Get on Day 1
+
+- **Laptop**
+- **YubiKey**
+- **Credentials** for: email, Slack, GitHub, and staging (staging access is read-only)
+- Your email will follow the format `firstname.lastname@bts-synthetic.example`
+- GitHub org: `bts-synthetic`
+
+**No production access on Day 1.** The earliest you can get read-only prod access is after 3 working days (requires completing the Prod Access Foundations cert + an IAM request).

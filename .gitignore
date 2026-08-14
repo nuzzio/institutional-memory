@@ -1,0 +1,18 @@
+# Per-run resource ids written by create_agent.py. Not secrets — useless without
+# the key — but they identify live cloud resources on someone's workspace, and a
+# fork of this repo has no business carrying them.
+.agent_id
+.environment_id
+.memory_store_id
+.curator_agent_id
+.specialist_ids.json
+baseline/*_id
+
+# Credentials never belong on disk here; the key comes from the macOS Keychain.
+# See SETUP-NOTES.md.
+.env
+.env.*
+
+.venv/
+__pycache__/
+*.pyc

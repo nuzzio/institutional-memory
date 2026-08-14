@@ -1,0 +1,45 @@
+=== SESSION 2 ===
+Question: I just joined the company and I need read-only prod access to debug an issue tomorrow. What do I do? Be specific about the steps and the people I need to talk to.
+
+--- ANSWER ---
+Let me check memory first, then reconcile with the new documents.I can see the old policy in memory. The new documents update it significantly. Let me update memory before answering.Memory updated. Now here's your answer — and note that **this differs significantly from what I would have told you last session**.
+
+---
+
+## ⚠️ What changed (and why this matters)
+
+The old process — Slack ticket → SRE pairing session → Okta provisioning — was replaced effective **2026-05-15** after an incident review showed the backlog had grown to 3 weeks. The new process is self-service and faster.
+
+---
+
+## How to get read-only prod access: step-by-step
+
+### Step 0 — Check your tenure
+
+You must have **3 working days** of tenure before you can get access. If you started Monday, you're eligible from Thursday. If tomorrow is too soon, talk to your manager about the emergency exception path (see below).
+
+### Step 1 — Complete the certification (solo, ~90 min)
+
+Go to the **BTS Learning portal** and complete the **"Prod Access Foundations"** course. It's self-paced with an assessment at the end. You need to pass the assessment.
+
+### Step 2 — Get your manager's sign-off on the certification
+
+Your manager must approve the **initial certification** (one-time only). Loop them in now so they can approve it the moment you finish — don't wait until after you complete the course.
+
+### Step 3 — Request access via the IAM platform
+
+When you pass the assessment, you'll receive a completion email with a **link to the IAM platform**. Submit your access request there. Access is granted **just-in-time**, scoped to a **4-hour window**. If you need more time, you just re-request.
+
+### Who do you actually need to talk to?
+
+| Person | Why |
+|---|---|
+| **Your manager** | Must sign off on your initial certification. That's it — no SRE, no Slack ticket needed. |
+
+**No SRE involvement required. Do not open a Slack ticket in #sre-access-requests — that process is gone.**
+
+---
+
+## If you genuinely can't wait (tenure or timing issue)
+
+The old emergency exception (on-call SRE grants 24-hour access) may still exist in some form, but the new policy doesn't document it explicitly. If you're blocked, escalate to your manager and ask them to contact **Carlos Mendes** (Head of SRE, @carlosm) or **Maya Singh** (Head of Security, @maya-s) directly for guidance on your specific situation.

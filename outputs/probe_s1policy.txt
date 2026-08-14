@@ -1,0 +1,29 @@
+Here's what my memory store has on both questions:
+
+---
+
+## Git Workflow
+
+**Trunk-based development.** All changes go in via Pull Request, and you need **two approvals to merge**. That's it — no long-lived feature branches.
+
+*(Source: onboarding-handbook.md, January 2026 baseline)*
+
+---
+
+## Day 1
+
+On your first day you receive:
+- **Laptop**
+- **YubiKey**
+- **Email** (format: `firstname.lastname@bts-synthetic.example`)
+- **Slack** access
+- **GitHub** access (org: `bts-synthetic`)
+- **Read-only staging** access
+
+You do **not** get production access on Day 1. Under the current policy (effective 2026-05-15), the earliest you can request read-only prod access is **Day 4** (after 3 working days), and only after completing the *Prod Access Foundations* course in the BTS Learning portal and getting your manager to sign off on the initial certification.
+
+You'll also be assigned a **buddy** by your manager for your first two weeks.
+
+---
+
+Everything above comes directly from memory recorded in prior sessions. If any of this seems off, let me know and I'll flag it as a conflict.

@@ -1,0 +1,35 @@
+=== SESSION 2 ===
+Question: I just joined the company and I need read-only prod access to debug an issue tomorrow. What do I do? Be specific about the steps and the people I need to talk to.
+
+--- ANSWER ---
+Let me check my memory store first before answering.My memory is from the old January 2026 policy. The new documents directly contradict it on multiple points. Let me update memory before answering.---
+
+## ⚠️ What changed from my previous answer
+
+The production access policy was **completely overhauled on 2026-05-15** (triggered by an April incident review). The old process — Slack ticket + SRE pairing session + 2-week tenure — **no longer exists**. Here's what to actually do:
+
+---
+
+## How to get read-only prod access tomorrow
+
+### Step 1 — Check your tenure (possible blocker)
+The policy requires a minimum of **3 working days** at the company. You can request access from **day 4**. If you only started today (day 1) or yesterday (day 2), you don't meet this requirement yet. Talk to your manager about options if that's the case.
+
+### Step 2 — Complete the certification (do this today)
+Go to the **BTS Learning portal** and complete the **"Prod Access Foundations"** course.
+- It's self-paced and takes ~90 minutes.
+- Complete the assessment at the end — you need to pass to proceed.
+- When you finish, you'll receive a **completion email with a link to the IAM platform**.
+
+### Step 3 — Get your manager's sign-off
+Your manager needs to sign off **once** on your certification before you can make your first access request. Loop them in now so there's no delay. This is the only person you need to contact — no SRE involvement, no Slack ticket.
+
+### Step 4 — Request access via the IAM platform
+Use the link from your completion email to submit a request in the IAM platform.
+- Access is granted **just-in-time**, valid for a **4-hour window**.
+- Your manager will be automatically notified (they don't need to approve — just notified).
+- Re-request for additional windows as needed.
+
+---
+
+**Nobody else you need to talk to.** The old `#sre-access-requests` Slack channel and SRE pairing session are gone. The whole process is now self-service through the learning portal + IAM platform, with your manager as the only human touchpoint.
