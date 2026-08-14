@@ -3,6 +3,10 @@
 Everything below assumes a clean machine and no context from whoever built it.
 Roughly ten minutes, most of it waiting on installs.
 
+**This repo is self-contained.** Nothing here needs any of our other repositories,
+and nothing waits on an upstream merge. If you are presenting rather than running,
+see [PRESENTING.md](./PRESENTING.md).
+
 ## 0. What you need first
 
 - **Python 3.10+**

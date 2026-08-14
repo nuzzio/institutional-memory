@@ -12,10 +12,10 @@ python3 -m venv .venv
 ```
 
 `.venv` is not tracked. The API key comes from the macOS Keychain rather than a
-`.env` file, via a `sitecustomize.py` copied into the venv's `site-packages`
-(same arrangement as `Basecamp-Exercises`, restore it from
-`../Basecamp-Exercises/keychain-sitecustomize.py`). **Do not create a `.env`
-here** — the README's `export ANTHROPIC_API_KEY=...` would put the key in shell
+`.env` file, via a uniquely-named module in the venv's `site-packages` loaded by a
+one-line `.pth` — not `sitecustomize.py`, which Homebrew's Python shadows. That is
+a local convenience and is **not** part of this repo; teammates should use `.env`
+or an export, both of which work. **Do not commit a `.env`** — the README's `export ANTHROPIC_API_KEY=...` would put the key in shell
 history, and a `.env` would put it on disk.
 
 ## Access checked, 14 Aug 2026
@@ -103,8 +103,8 @@ private workspace.
 ## Where our own work plugs in
 
 The track's demo is *same question, two sessions, visibly sharper answer* — a
-claim, asserted. Everything in [`../green-audit/`](../green-audit) exists to test
-claims of that shape:
+claim, asserted. Our verification tooling (a separate project) exists to test claims
+of that shape:
 
 - **Scoring "sharper"** — Card A already states the rubric (cites the new policy,
   does not recommend the old workflow, notes it changed). Three atomic checks, one
