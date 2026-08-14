@@ -22,16 +22,19 @@ python3 -m venv .venv
 The branch is upstream's track plus our adversarial round, memory policy and
 evidence. `main` is upstream unmodified.
 
-## 2. Set the key — and note that `.env` does not work
+## 2. Set the key
+
+Either works on this branch:
 
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-..."
+# or
+echo 'ANTHROPIC_API_KEY=sk-ant-...' > .env      # .env is gitignored
 ```
 
-`python-dotenv` is in `requirements.txt` but **nothing calls `load_dotenv()`**, so
-creating a `.env` file looks reasonable and silently does nothing — you get
-`Set ANTHROPIC_API_KEY before running.` and no hint as to why. Export it, or add
-`load_dotenv()` yourself.
+`python-dotenv` was in `requirements.txt` with nothing calling `load_dotenv()`, so
+on upstream `main` a `.env` file looks reasonable, silently does nothing, and gives
+you `Set ANTHROPIC_API_KEY before running.` with no hint why. Fixed here.
 
 On macOS you can keep it out of your shell history entirely:
 
@@ -109,6 +112,19 @@ remember` lists. Changing it means re-running `create_agent.py`, which gives you
 and compare afterwards with `compare_memory.py`. It prints its own warning that a
 smaller store is not automatically a better one; check the answer, not just the
 size. Ours went 6,036 → 5,201 characters with the scenario rubric still at 4/4.
+
+## If you keep more than one key around
+
+Two workspaces means two keys, and mixing them up is quiet rather than loud —
+resources created under one are invisible to the other, and the only symptom is
+`NotFoundError`. It cost us a stray agent on the shared team workspace, created by
+a throwaway command that picked up the wrong key.
+
+Print which one you are about to use before anything that creates resources:
+
+```bash
+.venv/bin/python -c "import os; print(os.environ['ANTHROPIC_API_KEY'][-6:])"
+```
 
 ## Two things that cost us time
 

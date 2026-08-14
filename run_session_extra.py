@@ -29,6 +29,11 @@ import sys
 from pathlib import Path
 
 from anthropic import Anthropic
+from dotenv import load_dotenv
+
+# requirements.txt ships python-dotenv but nothing used to call this, so a .env
+# file looked reasonable and silently did nothing.
+load_dotenv()
 
 TEST_QUESTION = (
     "I just joined the company and I need read-only prod access to debug an "
