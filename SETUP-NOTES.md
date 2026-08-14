@@ -69,6 +69,20 @@ for n in ('agents','environments','memory_stores'):
     print(n, len(getattr(c.beta,n).list(limit=1).data or []))"
 ```
 
+## Pushed
+
+Our work on top of this track lives on a branch of the fork, since it only ever
+existed on one laptop and the published findings point at it:
+
+| Branch | |
+|---|---|
+| `basecamp/verification-work` | the adversarial round, the memory policy, and the evidence — https://github.com/nuzzio/institutional-memory/tree/basecamp/verification-work |
+| `fix/memory-curator-session` | the three curator fixes, upstream as [PR #13](https://github.com/rosscrooke/institutional-memory/pull/13) |
+
+Resource ids stay out of both: gitignored, and redacted from the memory dumps
+before committing. They are not secrets, but they name live resources on a
+private workspace.
+
 ## Where our own work plugs in
 
 The track's demo is *same question, two sessions, visibly sharper answer* — a
