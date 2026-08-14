@@ -13,14 +13,18 @@ Roughly ten minutes, most of it waiting on installs.
 ## 1. Get the code
 
 ```bash
-git clone -b basecamp/verification-work https://github.com/nuzzio/institutional-memory.git
+git clone https://github.com/nuzzio/institutional-memory.git
 cd institutional-memory
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 ```
 
-The branch is upstream's track plus our adversarial round, memory policy and
-evidence. `main` is upstream unmodified.
+No branch flag needed — `basecamp/verification-work` is the default, so a plain
+clone gives you the working version. It is upstream's track plus our fixes, the
+adversarial round, the memory policy and the evidence.
+
+`main` is upstream unmodified and **does not work**: the curator crashes and a
+`.env` file is silently ignored. Only go there to diff against the original.
 
 ## 2. Set the key
 
