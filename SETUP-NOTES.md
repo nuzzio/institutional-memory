@@ -69,6 +69,23 @@ for n in ('agents','environments','memory_stores'):
     print(n, len(getattr(c.beta,n).list(limit=1).data or []))"
 ```
 
+## Remotes
+
+This working copy was originally cloned from `rosscrooke/institutional-memory`, so
+`origin` pointed at somebody else's repo. Swapped, because everything we do lands
+in ours:
+
+| | |
+|---|---|
+| `origin` | `nuzzio/institutional-memory` — ours, push here |
+| `upstream` | `rosscrooke/institutional-memory` — fetch only; push URL deliberately set to a non-existent address |
+
+A fresh clone should come from **ours**, not theirs:
+
+```bash
+git clone -b basecamp/verification-work git@github.com:nuzzio/institutional-memory.git
+```
+
 ## Pushed
 
 Our work on top of this track lives on a branch of the fork, since it only ever
