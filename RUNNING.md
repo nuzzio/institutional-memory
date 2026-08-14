@@ -49,17 +49,13 @@ export ANTHROPIC_API_KEY=$(security find-generic-password -a "$USER" -s ANTHROPI
 
 ## 3. Check access *before* building anything
 
-Sixty seconds, creates nothing, and tells you whether the rest of this will work:
-
 ```bash
-.venv/bin/python -c "
-import anthropic; c = anthropic.Anthropic()
-for n in ('agents','environments','memory_stores'):
-    print(n, 'OK', len(getattr(c.beta, n).list(limit=1).data or []), 'existing')"
+.venv/bin/python check_access.py
 ```
 
-If that raises, stop — nothing below will work, and it is a workspace permission
-question, not a code question.
+Sixty seconds, creates nothing, and tells you whether the rest of this will work.
+If it fails, stop — Managed Agents is granted per *workspace*, and that is a
+permissions question rather than a code one.
 
 ## 4. Build it
 
