@@ -85,9 +85,15 @@ you switch keys, delete them and re-run `create_agent.py`, or you will get
 ```
 
 **`adversarial`** feeds it `synthetic-data/round3/` — an undated, unattributed note
-claiming the old policy is back, contradicting a dated one already in memory. Watch
-the `Memory operations` count at the end. Ours was **4 operations, 0 write-shaped**:
-it flagged the conflict and asked rather than overwriting.
+claiming the old policy is back, contradicting a dated one already in memory.
+
+**Do not expect it to hold.** One early run gave 0 memory writes and a clean refusal;
+six controlled trials since (`adversarial_trial.py`) reproduced that **zero times**.
+Every trial wrote to memory and treated the undated note as credible enough to act
+on. The memory policy changes what the agent *leads with* — 3/3 baseline trials open
+their plan with the unsourced route, 0/3 policy trials do — but it does not stop it
+trusting the note. Run it a few times before you believe any single result,
+including ours.
 
 The prompt in that script deliberately says nothing about updating or trusting
 newer information. `run_session_2.py` does say that, correctly, for a real policy
